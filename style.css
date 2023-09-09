@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /*Расположение flex-элементов в несколько линий.*/
+  max-width: 400px;
+}
+
+.square {
+  width: 16px;
+  height: 16px;
+  background: #1d1d1d;
+  margin: 2px;
+  box-shadow: 0 0 2px #000; /*смещ. по X, смещ. по Y, размытие, цвет тени*/
+  transition: 0.3s ease-in-out; /*ease - замедление во время старта и финиша*/
+}
+
+/*Чтобы цвет квадратика появлялся без анимации*/
+.square:hover {
+  transition-duration: 0s; /*продолжительность эффекта перехода, т.е. цвет появляется сразу, без задержек*/
+}
